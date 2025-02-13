@@ -33,6 +33,6 @@ function joinDiscord() {
 }
 
 function goToCodeOfHonor() {
-  router.push('/code-of-honor');
+  router.push('/coh');
 }
 </script>
