@@ -9,7 +9,7 @@
           class="mb-4"
           max-height="600"
         />
-        <v-btn class="ma-2" color="primary" @click="joinDiscord">
+        <v-btn class="ma-2" color="primary" @click="joinDiscord" disabled>
           Join Our Discord
         </v-btn>
         <v-btn class="ma-2" color="secondary" disabled>
