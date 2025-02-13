@@ -1,0 +1,10 @@
+services:
+  web:
+    build: sparta-website
+    environment:
+      - SERVICE_FQDN_spartawebsite_3000
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3000"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
