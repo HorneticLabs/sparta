@@ -15,13 +15,24 @@
         <v-btn class="ma-2" color="secondary" disabled>
           Members
         </v-btn>
+        <v-btn class="ma-2" color="secondary" @click="goToCodeOfHonor">
+          Code of Honor
+        </v-btn>
       </v-card-text>
     </v-card>
   </v-container>
 </template>
 
 <script setup>
+import { useRouter } from 'vue-router';
+
+const router = useRouter();
+
 function joinDiscord() {
   window.open("https://discord.com/invite/Howdidyougethere?", "_blank");
+}
+
+function goToCodeOfHonor() {
+  router.push('/coh');
 }
 </script>
