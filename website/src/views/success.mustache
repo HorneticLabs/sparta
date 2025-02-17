@@ -1,13 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>{{ title }}</title>
-  <link rel="stylesheet" href="/css/style.css">
-</head>
-<body>
-  <h1>Thank You!</h1>
-  <p>Your application has been submitted successfully.</p>
-  <a href="/">Back to Home</a>
-</body>
+  <head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+    <link href="https://cdn.jsdelivr.net/npm/@mdi/font@6.9.96/css/materialdesignicons.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/vuetify@3.7.12/dist/vuetify.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+    <meta name="description" content="Application Success">
+    <link rel="stylesheet" href="/css/style.css">
+  </head>
+  <body>
+    <div id="app">
+      <v-app>
+        <v-main>
+          <v-container fluid class="d-flex align-center justify-center" style="height: 100vh;">
+            <v-card class="pa-8" max-width="500" elevation="2" rounded>
+              <v-card-title class="text-center">{{ title }}</v-card-title>
+              <v-card-text class="text-center">
+                <p>Your application has been submitted successfully!</p>
+                <p style="font-size: 0.8rem; color: #888;">
+                  Disclaimer: Your IP address is temporarily stored in memory for 24 hours solely to prevent spam.
+                  This data is not logged on the frontend and is automatically deleted after 24 hours.
+                </p>
+                <v-btn color="primary" class="ma-2" @click="goHome">Return Home</v-btn>
+              </v-card-text>
+            </v-card>
+          </v-container>
+        </v-main>
+      </v-app>
+    </div>
+    
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vuetify@3.7.12/dist/vuetify.min.js"></script>
+    <script>
+      const { createApp } = Vue;
+      const { createVuetify } = Vuetify;
+      
+      createApp({
+        methods: {
+          goHome() {
+            window.location.href = "/";
+          }
+        }
+      })
+      .use(createVuetify())
+      .mount('#app');
+    </script>
+  </body>
 </html>
