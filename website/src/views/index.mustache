@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minecraft Group</title>
+    <link href="https://cdn.jsdelivr.net/npm/@mdi/font@6.9.96/css/materialdesignicons.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/vuetify@3.7.12/dist/vuetify.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+    <meta name="description" content="Welcome to our Minecraft Group!">
+  </head>
+  <body>
+    <div id="app">
+      <v-app>
+        <v-main>
+          <v-container fluid class="d-flex align-center justify-center" style="height: 100vh;">
+            <v-card class="pa-8" max-width="500" elevation="2" rounded>
+              <v-card-text class="text-center">
+                <v-img 
+                  src="/sparta-title.png" 
+                  alt="Sparta Title" 
+                  contain 
+                  class="mb-4" 
+                  max-height="600">
+                </v-img>
+                <v-btn class="ma-2" color="primary" @click="joinDiscord" disabled>
+                  Join Our Discord
+                </v-btn>
+                <v-btn class="ma-2" color="secondary" @click="goToCodeOfHonor">
+                  Code of Honor
+                </v-btn>
+                <v-btn class="ma-2" color="primary" @click="goToApplication">
+                  Application
+                </v-btn>
+              </v-card-text>
+            </v-card>
+          </v-container>
+        </v-main>
+      </v-app>
+    </div>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vuetify@3.7.12/dist/vuetify.min.js"></script>
+    <script>
+      const { createApp } = Vue;
+      const { createVuetify } = Vuetify;
+
+      createApp({
+        methods: {
+          joinDiscord() {
+            window.open("https://discord.com/invite/Howdidyougethere?", "_blank");
+          },
+          goToCodeOfHonor() {
+            window.location.href = "/coh";
+          },
+          goToApplication() {
+            window.location.href = "/apply";
+          }
+        }
+      })
+      .use(createVuetify())
+      .mount('#app');
+    </script>
+  </body>
+</html>
