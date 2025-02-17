@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>{{ title }}</title>
+    <link href="https://cdn.jsdelivr.net/npm/@mdi/font@6.9.96/css/materialdesignicons.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/vuetify@3.7.12/dist/vuetify.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+  </head>
+  <body>
+    <div id="app">
+      <v-app>
+        <v-main>
+          <v-container fluid class="d-flex align-center justify-center" style="min-height: 100vh;">
+            <v-card class="pa-8" max-width="800" elevation="2" rounded>
+              <v-card-title class="headline text-center">Code of Honor</v-card-title>
+              <v-card-text>
+                <v-row>
+                  <v-col cols="12">
+                    <p class="mb-4"><strong>Code of Honor to the Kingdom of Sparta,</strong></p>
+                  </v-col>
+                </v-row>
+                <v-row class="mt-4">
+                  <v-col cols="12">
+                    <p><strong>Code 1:</strong> As a Spartan, you are required to wear your issued uniform in accordance with your rank at all times on spartan soil. Off spartan soil, you may wear what you please.</p>
+                    <p><strong>Code 2:</strong> While on spartan soil, or when communicating with a fellow Spartan, you must always use <code>/r</code> or <code>/msg</code> to communicate.</p>
+                    <p><strong>Code 3:</strong> Never build or destroy without proper authorization while on spartan soil—unless given explicit permission by an [O-5]+. When in doubt, ask.</p>
+                    <p><strong>Code 4:</strong> Keep all discussions of spartan operational information strictly between Spartans. Sharing such information with non-citizens is forbidden.</p>
+                    <p><strong>Code 5:</strong> Address all officers and anyone above the rank of [O-1] as "Sir" or "Ma'am." Lower ranks may be addressed informally.</p>
+                    <p><strong>Code 6:</strong> Carry this book with you at all times or keep it readily accessible. Any officer at [O-1] or above may request to see it at any time.</p>
+                    <p class="mt-4"><strong>Note:</strong> After 3 strikes, you will be exiled from the Kingdom of Sparta.</p>
+                  </v-col>
+                </v-row>
+                </v-row>
+              </v-card-text>
+            </v-card>
+          </v-container>
+        </v-main>
+      </v-app>
+    </div>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vuetify@3.7.12/dist/vuetify.min.js"></script>
+    <script>
+      const { createApp } = Vue;
+      const { createVuetify } = Vuetify;
+      createApp({}).use(createVuetify()).mount('#app');
+    </script>
+  </body>
+</html>
