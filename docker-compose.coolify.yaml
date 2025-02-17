@@ -1,6 +1,6 @@
 services:
   web:
-    build: sparta-website
+    build: website
     environment:
       - SERVICE_FQDN_spartawebsite_3000
       - DISCORD_WEBHOOK_URL=${discord_webhook}
