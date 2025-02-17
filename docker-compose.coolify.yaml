@@ -1,6 +1,6 @@
 services:
   web:
-    build: website
+    image: ghcr.io/horneticlabs/sparta:main
     environment:
       - SERVICE_FQDN_spartawebsite_3000
       - DISCORD_WEBHOOK_URL=${discord_webhook}
