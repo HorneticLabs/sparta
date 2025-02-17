@@ -8,13 +8,34 @@
     <link href="https://cdn.jsdelivr.net/npm/vuetify@3.7.12/dist/vuetify.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
     <meta name="description" content="Welcome to our Minecraft Group!">
+    <style>
+      /* Set the background image for the entire page */
+      body {
+        background-image: url('/world-capital.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        margin: 0;
+        min-height: 100vh;
+      }
+      /* Add a glassmorphism effect to the card */
+      .blur-card {
+        backdrop-filter: blur(10px);
+        background-color: rgba(255, 255, 255, 0.2);
+      }
+      /* Ensure buttons are clearly visible */
+      .v-btn {
+        text-transform: none;
+        font-weight: bold;
+      }
+    </style>
   </head>
   <body>
     <div id="app">
       <v-app>
         <v-main>
           <v-container fluid class="d-flex align-center justify-center" style="height: 100vh;">
-            <v-card class="pa-8" max-width="500" elevation="2" rounded>
+            <v-card class="pa-8 blur-card" max-width="500" elevation="2" rounded>
               <v-card-text class="text-center">
                 <v-img 
                   src="/sparta-title.png" 
@@ -23,7 +44,7 @@
                   class="mb-4" 
                   max-height="600">
                 </v-img>
-                <v-btn class="ma-2" color="primary" @click="joinDiscord" disabled>
+                <v-btn class="ma-2" color="primary" @click="joinDiscord">
                   Join Our Discord
                 </v-btn>
                 <v-btn class="ma-2" color="secondary" @click="goToCodeOfHonor">
